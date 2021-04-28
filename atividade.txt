@@ -1,0 +1,19 @@
+Quantas vezes Natalie Portman foi indicada ao Oscar? Quantas ela ganhou?
+R: duas vezes mas só ganhou em Black Swan (2010)
+código:SELECT * FROM `vencedoresdooscar` WHERE `Nominee`="Natalie Portman" AND`Won`="YES"
+
+
+Amy Adams já ganhou algum Oscar?
+R: nunca, ela é ruim
+código:SELECT * FROM `vencedoresdooscar` WHERE `Nominee`="Amy Adams" AND `Won`="NO"
+
+
+Toy Story 3 ganhou Oscar em quais anos?
+R: Ganhou em 2010 
+código:SELECT `Year`, `Won` FROM `vencedoresdooscar` WHERE`Nominee`="Toy Story 3" AND `Won`="YES"
+
+
+Quem tem mais Oscars: a categoria "Melhor Ator" ou "Melhor Filme"?
+R:O oscar de Melhor Ator tem 85 e o de melhor filme tem 83, portanto melhor ator tem mais oscars
+código:SELECT COUNT(*) FROM vencedoresdooscar WHERE category = "Best picture" AND won = "YES";  
+SELECT COUNT(*) FROM vencedoresdooscar WHERE category = "Actor -- Leading Role" AND won = "YES";
